@@ -13,7 +13,7 @@ link-citations: yes
 github-repo: sj-io/memphis
 ---
 
-# About
+# About {.unnumbered}
 
 This book was created to contain research related to Memphis, Tennessee.
 

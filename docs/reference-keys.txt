@@ -1,8 +1,1 @@
-fig:nice-fig
-tab:nice-tab
-about
 hello-bookdown
-cross
-chapters-and-sub-chapters
-captioned-figures-and-tables
-parts
