@@ -101,6 +101,7 @@ div.csl-indent {
 <li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#the-us-census"><i class="fa fa-check"></i><b>1.1</b> The US Census</a>
 <ul>
 <li class="chapter" data-level="1.1.1" data-path="introduction.html"><a href="introduction.html#geographies"><i class="fa fa-check"></i><b>1.1.1</b> Geographies</a></li>
+<li class="chapter" data-level="1.1.2" data-path="introduction.html"><a href="introduction.html#accessing-data"><i class="fa fa-check"></i><b>1.1.2</b> Accessing Data</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
@@ -162,7 +163,14 @@ div.csl-indent {
 <li><strong>Place</strong>: Memphis</li>
 </ul>
 <p>Counties are further subdivided into census tracts; tracts into block groups; block groups into blocks.</p>
-<!--# add leaflet map of various Memphis geographies. -->
+<!--# return to this section after Ch 6. add leaflet map of various Memphis geographies. -->
+</div>
+<div id="accessing-data" class="section level3" number="1.1.2">
+<h3><span class="header-section-number">1.1.2</span> Accessing Data</h3>
+<p>The simplest way to access Census data is through <a href="https://data.census.gov/cedsci/">data.census.gov</a>, where users can enter custom queries and download datasets. Bulk ZIP files are also available on the Bureau’s <a href="https://www2.census.gov/programs-surveys/">FTP site</a>.</p>
+<p>Since 2012, Census data is available to the public through APIs. Datasets are assigned a base web address, such as <code>https://api.census.gov/data/2010/dec/sf1</code> for the 2010 Decennial Census. Users can specify which dataset they need through queries. For example, the query <code>?get=P001001,NAME&amp;for=county:*&amp;in=state:47</code> asks to see population data for all counties in Tennessee. This data can be seen <a href="https://api.census.gov/data/2010/dec/sf1?get=P001001,NAME&amp;for=county:*&amp;in=state:47">here</a>.</p>
+<p>Many R packages make it easier to interact with the Census API, such as <strong>tidycensus</strong>. Those who wish to access the Census API through R packages need to request a <a href="https://api.census.gov/data/key_signup.html">Census API key</a>, available for free.</p>
+<p>The basics of R will not be covered in this book. A rundown of R and the abilities to use it for Census data are available in <a href="https://walker-data.com/census-r/the-united-states-census-and-the-r-programming-language.html#what-is-r">Kyle Walker’s book</a>.</p>
 
 </div>
 </div>
