@@ -32,7 +32,7 @@ Census data is published for a range of geographies, from the nation as a whole,
 
 Let's use Memphis as an example.[^intro-1]
 
-[^intro-1]: Information on region and division were found [here](https://www2.census.gov/geo/pdfs/maps-data/maps/reference/us_regdiv.pdf "Census Regions and Divisions of the United States").
+[^intro-1]: Information on region and division were found [on these Census Bureau maps](https://www2.census.gov/geo/pdfs/maps-data/maps/reference/us_regdiv.pdf "Census Regions and Divisions of the United States").
 
 -   **Nation**: United States
 -   **Region**: South (Region 3)
@@ -51,6 +51,26 @@ The simplest way to access Census data is through [data.census.gov](https://data
 
 Since 2012, Census data is available to the public through APIs. Datasets are assigned a base web address, such as `https://api.census.gov/data/2010/dec/sf1` for the 2010 Decennial Census. Users can specify which dataset they need through queries. For example, the query `?get=P001001,NAME&for=county:*&in=state:47` asks to see population data for all counties in Tennessee. This data can be seen [here](https://api.census.gov/data/2010/dec/sf1?get=P001001,NAME&for=county:*&in=state:47).
 
-Many R packages make it easier to interact with the Census API, such as **tidycensus**. Those who wish to access the Census API through R packages need to request a [Census API key](https://api.census.gov/data/key_signup.html), available for free.
+Many R packages make it easier to interact with the Census API, such as **tidycensus**. Those who wish to access the Census API through R packages need to request a [**Census API key**](https://api.census.gov/data/key_signup.html), available for free.
 
-The basics of R will not be covered in this book. A rundown of R and the abilities to use it for Census data are available in [Kyle Walker's book](https://walker-data.com/census-r/the-united-states-census-and-the-r-programming-language.html#what-is-r).
+## R
+
+[**R**](https://cloud.r-project.org/) is a powerful, popular programming language, available as a free and open-source software ([FOSS](https://en.wikipedia.org/wiki/Free_and_open-source_software)). It is possible to work solely with R, but it is typically paired with [**RStudio**](https://www.rstudio.com/products/rstudio/download/), another FOSS. The basics of R and RStudio will not be covered in this book. If you are completely new to these programs, I recommend you read the brief rundown in [Kyle Walker's book](https://walker-data.com/census-r/the-united-states-census-and-the-r-programming-language.html#what-is-r) and read/bookmark/work through [R for Data Science](https://r4ds.had.co.nz/).
+
+An R **package** is a collection of functions, data, and documentation that extends the capabilities of base R.[@wickham2017, 1.4.3] Anyone can make a package and submit it for publication (or host it on their personal GitHub page).[@walker2021, 1.4.4] This means R can quickly evolve and develop as the community sees fit, unlike commercial software. However, this can make R feel fragmented and overwhelming to new users.
+
+### tidyverse
+
+The **tidyverse** is a collection of packages that share a common philosophy and are designed to work together naturally, addressing problems of fragmentation. These packages are designed to address frequent data analysis tasks, including data wrangling and visualization, using a common syntax.
+
+Key to the tidyverse is the idea of **tidy data**.[@wickham2014] A dataset is messy or tidy depending on how rows, columns, and values are organized. There are three rules which make data tidy:
+
+1.  Each variable must have its own column.
+2.  Each observation must have its own row.
+3.  Each value must have its own cell.
+
+*Messy data* is any other arrangement of the data. These rules are visualized below.[@wickham2017, 12.2]
+
+![A dataset is tidy if: variables are in columns, observations are in rows, and values are in cells.](_img/tidy-data.png)
+
+Keeping data in a tidy format creates a consistent way of storing data and makes tidyverse packages easy to use. This book will contain many examples of tidy data.

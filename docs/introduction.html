@@ -10,7 +10,7 @@
 
   <meta property="og:title" content="Chapter 1 Introduction | Memphis" />
   <meta property="og:type" content="book" />
-  
+  <meta property="og:url" content="https://sj-io.github.io/memphis/" />
   
   <meta property="og:description" content="A project to analyze Memphis census data" />
   <meta name="github-repo" content="sj-io/memphis" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Sarah Johnson" />
 
 
-<meta name="date" content="2021-09-21" />
+<meta name="date" content="2021-09-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -103,6 +103,10 @@ div.csl-indent {
 <li class="chapter" data-level="1.1.1" data-path="introduction.html"><a href="introduction.html#geographies"><i class="fa fa-check"></i><b>1.1.1</b> Geographies</a></li>
 <li class="chapter" data-level="1.1.2" data-path="introduction.html"><a href="introduction.html#accessing-data"><i class="fa fa-check"></i><b>1.1.2</b> Accessing Data</a></li>
 </ul></li>
+<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#r"><i class="fa fa-check"></i><b>1.2</b> R</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="introduction.html"><a href="introduction.html#tidyverse"><i class="fa fa-check"></i><b>1.2.1</b> tidyverse</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -127,7 +131,7 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="introduction" class="section level1" number="1">
 <h1><span class="header-section-number">Chapter 1</span> Introduction</h1>
-<p>This section will cover the basics of the US Census…</p>
+<p>This section will cover the basics of the US Census, geographic divisions, and how to access Census data.</p>
 <div id="the-us-census" class="section level2" number="1.1">
 <h2><span class="header-section-number">1.1</span> The US Census</h2>
 <p>The United States Constitution mandates a complete count of the US population be taken every ten years. The first Census was conducted in 1790, and population counts were (and still are) used to apportion seats for the House of Representatives.</p>
@@ -169,8 +173,28 @@ div.csl-indent {
 <h3><span class="header-section-number">1.1.2</span> Accessing Data</h3>
 <p>The simplest way to access Census data is through <a href="https://data.census.gov/cedsci/">data.census.gov</a>, where users can enter custom queries and download datasets. Bulk ZIP files are also available on the Bureau’s <a href="https://www2.census.gov/programs-surveys/">FTP site</a>.</p>
 <p>Since 2012, Census data is available to the public through APIs. Datasets are assigned a base web address, such as <code>https://api.census.gov/data/2010/dec/sf1</code> for the 2010 Decennial Census. Users can specify which dataset they need through queries. For example, the query <code>?get=P001001,NAME&amp;for=county:*&amp;in=state:47</code> asks to see population data for all counties in Tennessee. This data can be seen <a href="https://api.census.gov/data/2010/dec/sf1?get=P001001,NAME&amp;for=county:*&amp;in=state:47">here</a>.</p>
-<p>Many R packages make it easier to interact with the Census API, such as <strong>tidycensus</strong>. Those who wish to access the Census API through R packages need to request a <a href="https://api.census.gov/data/key_signup.html">Census API key</a>, available for free.</p>
-<p>The basics of R will not be covered in this book. A rundown of R and the abilities to use it for Census data are available in <a href="https://walker-data.com/census-r/the-united-states-census-and-the-r-programming-language.html#what-is-r">Kyle Walker’s book</a>.</p>
+<p>Many R packages make it easier to interact with the Census API, such as <strong>tidycensus</strong>. Those who wish to access the Census API through R packages need to request a <a href="https://api.census.gov/data/key_signup.html"><strong>Census API key</strong></a>, available for free.</p>
+</div>
+</div>
+<div id="r" class="section level2" number="1.2">
+<h2><span class="header-section-number">1.2</span> R</h2>
+<p><a href="https://cloud.r-project.org/"><strong>R</strong></a> is a powerful, popular programming language, available as a free and open-source software (<a href="https://en.wikipedia.org/wiki/Free_and_open-source_software">FOSS</a>). It is possible to work solely with R, but it is typically paired with <a href="https://www.rstudio.com/products/rstudio/download/"><strong>RStudio</strong></a>, another FOSS. The basics of R and RStudio will not be covered in this book. If you are completely new to these programs, I recommend you read the brief rundown in <a href="https://walker-data.com/census-r/the-united-states-census-and-the-r-programming-language.html#what-is-r">Kyle Walker’s book</a> and read/bookmark/work through <a href="https://r4ds.had.co.nz/">R for Data Science</a>.</p>
+<p>An R <strong>package</strong> is a collection of functions, data, and documentation that extends the capabilities of base R.<span class="citation"><a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></span> Anyone can make a package and submit it for publication (or host it on their personal GitHub page).<span class="citation"><a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a></span> This means R can quickly evolve and develop as the community sees fit, unlike commercial software. However, this can make R feel fragmented and overwhelming to new users.</p>
+<div id="tidyverse" class="section level3" number="1.2.1">
+<h3><span class="header-section-number">1.2.1</span> tidyverse</h3>
+<p>The <strong>tidyverse</strong> is a collection of packages that share a common philosophy and are designed to work together naturally, addressing problems of fragmentation. These packages are designed to address frequent data analysis tasks, including data wrangling and visualization, using a common syntax.</p>
+<p>Key to the tidyverse is the idea of <strong>tidy data</strong>.<span class="citation"><a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a></span> A dataset is messy or tidy depending on how rows, columns, and values are organized. There are three rules which make data tidy:</p>
+<ol style="list-style-type: decimal">
+<li>Each variable must have its own column.</li>
+<li>Each observation must have its own row.</li>
+<li>Each value must have its own cell.</li>
+</ol>
+<p><em>Messy data</em> is any other arrangement of the data. These rules are visualized below.<span class="citation"><a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a></span></p>
+<div class="figure">
+<img src="_img/tidy-data.png" alt="" />
+<p class="caption">A dataset is tidy if: variables are in columns, observations are in rows, and values are in cells.</p>
+</div>
+<p>Keeping data in a tidy format creates a consistent way of storing data and makes tidyverse packages easy to use. This book will contain many examples of tidy data.</p>
 
 </div>
 </div>
@@ -180,12 +204,25 @@ div.csl-indent {
 <div id="ref-uscensusbureau2017" class="csl-entry">
 US Census Bureau. <span>“Standard Hierarchy of Census Geographic Entities,”</span> December 5, 2017. <a href="https://www.census.gov/programs-surveys/geography/guidance/hierarchy.html">https://www.census.gov/programs-surveys/geography/guidance/hierarchy.html</a>.
 </div>
+<div id="ref-walker2021" class="csl-entry">
+Walker, Kyle E. <em>Analyzing US Census Data</em>. CRC Press, 2021. <a href="https://walker-data.com/census-r">https://walker-data.com/census-r</a>.
+</div>
+<div id="ref-wickham2014" class="csl-entry">
+Wickham, Hadley. <span>“Tidy Data.”</span> <em>Journal of Statistical Software</em> 59, no. 1 (September 12, 2014): 1–23. doi:<a href="https://doi.org/10.18637/jss.v059.i10">10.18637/jss.v059.i10</a>.
+</div>
+<div id="ref-wickham2017" class="csl-entry">
+Wickham, Hadley, and Garrett Grolemund. <em>R for Data Science</em>. O’Reilly, 2017. <a href="https://r4ds.had.co.nz/introduction.html">https://r4ds.had.co.nz/introduction.html</a>.
+</div>
 </div>
 <div class="footnotes">
 <hr />
 <ol start="1">
 <li id="fn1"><p><a href="#ref-uscensusbureau2017" role="doc-biblioref">US Census Bureau, <span>“Standard Hierarchy of Census Geographic Entities”</span> December 5, 2017, <a href="https://www.census.gov/programs-surveys/geography/guidance/hierarchy.html" role="doc-biblioref">https://www.census.gov/programs-surveys/geography/guidance/hierarchy.html</a></a>.<a href="introduction.html#fnref1" class="footnote-back">↩︎</a></p></li>
-<li id="fn2"><p>Information on region and division were found <a href="https://www2.census.gov/geo/pdfs/maps-data/maps/reference/us_regdiv.pdf" title="Census Regions and Divisions of the United States">here</a>.<a href="introduction.html#fnref2" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>Information on region and division were found <a href="https://www2.census.gov/geo/pdfs/maps-data/maps/reference/us_regdiv.pdf" title="Census Regions and Divisions of the United States">on these Census Bureau maps</a>.<a href="introduction.html#fnref2" class="footnote-back">↩︎</a></p></li>
+<li id="fn3"><p><a href="#ref-wickham2017" role="doc-biblioref">Hadley Wickham and Garrett Grolemund, <em>R for Data Science</em> (O’Reilly, 2017), 1.4.3, <a href="https://r4ds.had.co.nz/introduction.html" role="doc-biblioref">https://r4ds.had.co.nz/introduction.html</a></a>.<a href="introduction.html#fnref3" class="footnote-back">↩︎</a></p></li>
+<li id="fn4"><p><a href="#ref-walker2021" role="doc-biblioref">Kyle E. Walker, <em>Analyzing US Census Data</em> (CRC Press, 2021), 1.4.4, <a href="https://walker-data.com/census-r" role="doc-biblioref">https://walker-data.com/census-r</a></a>.<a href="introduction.html#fnref4" class="footnote-back">↩︎</a></p></li>
+<li id="fn5"><p><a href="#ref-wickham2014" role="doc-biblioref">Hadley Wickham, <span>“Tidy Data,”</span> <em>Journal of Statistical Software</em> 59, no. 1 (September 12, 2014): 1–23, doi:<a href="https://doi.org/10.18637/jss.v059.i10" role="doc-biblioref">10.18637/jss.v059.i10</a></a>.<a href="introduction.html#fnref5" class="footnote-back">↩︎</a></p></li>
+<li id="fn6"><p><a href="#ref-wickham2017" role="doc-biblioref">Wickham and Grolemund, <em>R for Data Science</em>, 12.2</a>.<a href="introduction.html#fnref6" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

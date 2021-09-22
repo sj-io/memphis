@@ -2,3 +2,5 @@ introduction
 the-us-census
 geographies
 accessing-data
+r
+tidyverse
