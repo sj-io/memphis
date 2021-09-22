@@ -27,3 +27,20 @@ Due to COVID-related data collection problems, the 2020 1-year ACS data will not
 ### Geographies
 
 Census data is published for a range of geographies, from the nation as a whole, down to neighborhood-scale census blocks. The hierarchy used by the Census Bureau is shown below.[@uscensusbureau2017]
+
+![Geographic hierarchy used by US Census Bureau](_img/census-hierarchy.png)
+
+Let's use Memphis as an example.[^intro-1]
+
+[^intro-1]: Information on region and division were found [here](https://www2.census.gov/geo/pdfs/maps-data/maps/reference/us_regdiv.pdf "Census Regions and Divisions of the United States").
+
+-   **Nation**: United States
+-   **Region**: South (Region 3)
+-   **Division**: East South Central (Division 6)
+-   **State**: Tennessee (FIPS Code 47)
+-   **County**: Shelby
+-   **Place**: Memphis
+
+Counties are further subdivided into census tracts; tracts into block groups; block groups into blocks.
+
+<!--# add leaflet map of various Memphis geographies. -->
