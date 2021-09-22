@@ -1,3 +1,25 @@
-# Hello bookdown 
+# Introduction
 
-Intro body
+This section will cover the basics of the US Census...
+
+## The US Census
+
+The United States Constitution mandates a complete count of the US population be taken every ten years. The first Census was conducted in 1790, and population counts were (and still are) used to apportion seats for the House of Representatives.
+
+Overtime, the decennial Census expanded to collect data on income, education, language, housing, and more. The Bureau also began collecting data more frequently through [new surveys](https://www.census.gov/programs-surveys/surveys-programs.html "List of All US Census Surveys & Programs"), including the **American Community Survey (ACS)**. Unlike the decennial Census, the ACS does not attempt to precisely count all US residents. Rather, this survey is mailed annually to approximately 3.5 million households, representing \~3% of the US population. The ACS is now the premier source of detailed demographic information for the US.
+
+Two ACS datasets are made public each year: the 1-year ACS and the 5-year ACS.
+
+-   **1-Year ACS**
+
+    -   Covers areas with populations of 65,000+.
+
+    -   Contains data from one year; higher margin of error.
+
+-   **5-Year ACS**
+
+    -   Covers geographies down to the block group level.
+
+    -   Moving average of data over a 5-year period; lower margin of error.
+
+Due to COVID-related data collection problems, the 2020 1-year ACS data will not be released, replaced by experimental estimates.

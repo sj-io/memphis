@@ -1,4 +1,4 @@
---- 
+---
 title: "Memphis"
 author: "Sarah Johnson"
 date: "`r Sys.Date()`"
@@ -15,7 +15,11 @@ github-repo: sj-io/memphis
 
 # About {.unnumbered}
 
-This book was created to contain research related to Memphis, Tennessee.
+**tidycensus** is an R program that makes collecting, analyzing, and plotting census data dead simple. I have used tidycensus extensively in the past, including for my master's capstone.
+
+Since completing my capstone in August 2021, the creator of tidycensus, Kyle Walker, released a book entitled "[Analyzing US Census Data: Methods, Maps, and Models in R](https://walker-data.com/census-r/index.html)." I am eager to read through this book and learn new things.
+
+This repository is a place to organize my progress as I work through the book. All data analysis for this book will be centered around my hometown, Memphis, TN.
 
 ```{r include=FALSE}
 # automatically create a bib database for R packages

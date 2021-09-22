@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Memphis</title>
+  <title>Chapter 1 Introduction | Memphis</title>
   <meta name="description" content="A project to analyze Memphis census data" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Memphis" />
+  <meta property="og:title" content="Chapter 1 Introduction | Memphis" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="sj-io/memphis" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Memphis" />
+  <meta name="twitter:title" content="Chapter 1 Introduction | Memphis" />
   
   <meta name="twitter:description" content="A project to analyze Memphis census data" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="introduction.html"/>
+<link rel="prev" href="index.html"/>
+<link rel="next" href="references.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -99,25 +99,37 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Memphis</h1>
-<p class="author"><em>Sarah Johnson</em></p>
-<p class="date"><em>2021-09-21</em></p>
-</div>
-<div id="about" class="section level1 unnumbered">
-<h1>About</h1>
-<p><strong>tidycensus</strong> is an R program that makes collecting, analyzing, and plotting census data dead simple. I have used tidycensus extensively in the past, including for my master’s capstone.</p>
-<p>Since completing my capstone in August 2021, the creator of tidycensus, Kyle Walker, released a book entitled “<a href="https://walker-data.com/census-r/index.html">Analyzing US Census Data: Methods, Maps, and Models in R</a>.” I am eager to read through this book and learn new things.</p>
-<p>This repository is a place to organize my progress as I work through the book. All data analysis for this book will be centered around my hometown, Memphis, TN.</p>
+<div id="introduction" class="section level1" number="1">
+<h1><span class="header-section-number">Chapter 1</span> Introduction</h1>
+<p>This section will cover the basics of the US Census…</p>
+<div id="the-us-census" class="section level2" number="1.1">
+<h2><span class="header-section-number">1.1</span> The US Census</h2>
+<p>The United States Constitution mandates a complete count of the US population be taken every ten years. The first Census was conducted in 1790, and population counts were (and still are) used to apportion seats for the House of Representatives.</p>
+<p>Overtime, the decennial Census expanded to collect data on income, education, language, housing, and more. The Bureau also began collecting data more frequently through <a href="https://www.census.gov/programs-surveys/surveys-programs.html" title="List of All US Census Surveys &amp; Programs">new surveys</a>, including the <strong>American Community Survey (ACS)</strong>. Unlike the decennial Census, the ACS does not attempt to precisely count all US residents. Rather, this survey is mailed annually to approximately 3.5 million households, representing ~3% of the US population. The ACS is now the premier source of detailed demographic information for the US.</p>
+<p>Two ACS datasets are made public each year: the 1-year ACS and the 5-year ACS.</p>
+<ul>
+<li><p><strong>1-Year ACS</strong></p>
+<ul>
+<li><p>Covers areas with populations of 65,000+.</p></li>
+<li><p>Contains data from one year; higher margin of error.</p></li>
+</ul></li>
+<li><p><strong>5-Year ACS</strong></p>
+<ul>
+<li><p>Covers geographies down to the block group level.</p></li>
+<li><p>Moving average of data over a 5-year period; lower margin of error.</p></li>
+</ul></li>
+</ul>
+<p>Due to COVID-related data collection problems, the 2020 1-year ACS data will not be released, replaced by experimental estimates.</p>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="introduction.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -148,7 +160,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/sj-io/memphis/edit/main/index.Rmd",
+"link": "https://github.com/sj-io/memphis/edit/main/01-intro.Rmd",
 "text": "Edit"
 },
 "history": {
