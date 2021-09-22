@@ -23,3 +23,7 @@ Two ACS datasets are made public each year: the 1-year ACS and the 5-year ACS.
     -   Moving average of data over a 5-year period; lower margin of error.
 
 Due to COVID-related data collection problems, the 2020 1-year ACS data will not be released, replaced by experimental estimates.
+
+### Geographies
+
+Census data is published for a range of geographies, from the nation as a whole, down to neighborhood-scale census blocks. The hierarchy used by the Census Bureau is shown below.[@uscensusbureau2017]
