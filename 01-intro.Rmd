@@ -1,6 +1,6 @@
 # Introduction
 
-This section will cover the basics of the US Census...
+This section will cover the basics of the US Census, geographic divisions, and how to access Census data.
 
 ## The US Census
 
@@ -43,4 +43,14 @@ Let's use Memphis as an example.[^intro-1]
 
 Counties are further subdivided into census tracts; tracts into block groups; block groups into blocks.
 
-<!--# add leaflet map of various Memphis geographies. -->
+<!--# return to this section after Ch 6. add leaflet map of various Memphis geographies. -->
+
+### Accessing Data
+
+The simplest way to access Census data is through [data.census.gov](https://data.census.gov/cedsci/), where users can enter custom queries and download datasets. Bulk ZIP files are also available on the Bureau's [FTP site](https://www2.census.gov/programs-surveys/).
+
+Since 2012, Census data is available to the public through APIs. Datasets are assigned a base web address, such as `https://api.census.gov/data/2010/dec/sf1` for the 2010 Decennial Census. Users can specify which dataset they need through queries. For example, the query `?get=P001001,NAME&for=county:*&in=state:47` asks to see population data for all counties in Tennessee. This data can be seen [here](https://api.census.gov/data/2010/dec/sf1?get=P001001,NAME&for=county:*&in=state:47).
+
+Many R packages make it easier to interact with the Census API, such as **tidycensus**. Those who wish to access the Census API through R packages need to request a [Census API key](https://api.census.gov/data/key_signup.html), available for free.
+
+The basics of R will not be covered in this book. A rundown of R and the abilities to use it for Census data are available in [Kyle Walker's book](https://walker-data.com/census-r/the-united-states-census-and-the-r-programming-language.html#what-is-r).
