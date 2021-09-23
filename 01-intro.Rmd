@@ -74,3 +74,25 @@ Key to the tidyverse is the idea of **tidy data**.[@wickham2014] A dataset is me
 ![A dataset is tidy if: variables are in columns, observations are in rows, and values are in cells.](_img/tidy-data.png)
 
 Keeping data in a tidy format creates a consistent way of storing data and makes tidyverse packages easy to use. This book will contain many examples of tidy data.
+
+### tidycensus
+
+The **tidycensus** package, first released in 2017, aims to make Census data available to R users in a tidyverse-friendly format.[@walker2021, 2] The package also was designed to streamline spatial analysis by allowing users to request geometric attributes for their Census data.
+
+**tidycensus** is not a comprehensive portal to Census Bureau API. Instead, selected datasets are available through core functions:
+
+-   `get_decennial()`, for the Decennial Census APIs. Available for 2000, 2010, (and 2020 on 9/30/2021)
+
+-   `get_acs()` for the American Community Survey.
+
+    -   1-year ACS available from 2005
+
+    -   5-year ACS available from 2005-2009
+
+-   `get_estimates()`, for the Population Estimates APIs.
+
+-   `get_pums()`, for the ACS Public Use Microdata Sample APIs.
+
+-   `get_flows()`, for the ACS Migration Flows APIs.
+
+These functions allow users to easily and quickly access Census data.
