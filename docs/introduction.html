@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="index.html"/>
-<link rel="next" href="references.html"/>
+<link rel="next" href="getting-census-data.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -106,8 +106,10 @@ div.csl-indent {
 <li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#r"><i class="fa fa-check"></i><b>1.2</b> R</a>
 <ul>
 <li class="chapter" data-level="1.2.1" data-path="introduction.html"><a href="introduction.html#tidyverse"><i class="fa fa-check"></i><b>1.2.1</b> tidyverse</a></li>
+<li class="chapter" data-level="1.2.2" data-path="introduction.html"><a href="introduction.html#tidycensus"><i class="fa fa-check"></i><b>1.2.2</b> tidycensus</a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="2" data-path="getting-census-data.html"><a href="getting-census-data.html"><i class="fa fa-check"></i><b>2</b> Getting Census Data</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -195,6 +197,23 @@ div.csl-indent {
 <p class="caption">A dataset is tidy if: variables are in columns, observations are in rows, and values are in cells.</p>
 </div>
 <p>Keeping data in a tidy format creates a consistent way of storing data and makes tidyverse packages easy to use. This book will contain many examples of tidy data.</p>
+</div>
+<div id="tidycensus" class="section level3" number="1.2.2">
+<h3><span class="header-section-number">1.2.2</span> tidycensus</h3>
+<p>The <strong>tidycensus</strong> package, first released in 2017, aims to make Census data available to R users in a tidyverse-friendly format.<span class="citation"><a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a></span> The package also was designed to streamline spatial analysis by allowing users to request geometric attributes for their Census data.</p>
+<p><strong>tidycensus</strong> is not a comprehensive portal to Census Bureau API. Instead, selected datasets are available through core functions:</p>
+<ul>
+<li><p><code>get_decennial()</code>, for the Decennial Census APIs. Available for 2000, 2010, (and 2020 on 9/30/2021)</p></li>
+<li><p><code>get_acs()</code> for the American Community Survey.</p>
+<ul>
+<li><p>1-year ACS available from 2005</p></li>
+<li><p>5-year ACS available from 2005-2009</p></li>
+</ul></li>
+<li><p><code>get_estimates()</code>, for the Population Estimates APIs.</p></li>
+<li><p><code>get_pums()</code>, for the ACS Public Use Microdata Sample APIs.</p></li>
+<li><p><code>get_flows()</code>, for the ACS Migration Flows APIs.</p></li>
+</ul>
+<p>These functions allow users to easily and quickly access Census data.</p>
 
 </div>
 </div>
@@ -223,6 +242,7 @@ Wickham, Hadley, and Garrett Grolemund. <em>R for Data Science</em>. O’Reilly,
 <li id="fn4"><p><a href="#ref-walker2021" role="doc-biblioref">Kyle E. Walker, <em>Analyzing US Census Data</em> (CRC Press, 2021), 1.4.4, <a href="https://walker-data.com/census-r" role="doc-biblioref">https://walker-data.com/census-r</a></a>.<a href="introduction.html#fnref4" class="footnote-back">↩︎</a></p></li>
 <li id="fn5"><p><a href="#ref-wickham2014" role="doc-biblioref">Hadley Wickham, <span>“Tidy Data,”</span> <em>Journal of Statistical Software</em> 59, no. 1 (September 12, 2014): 1–23, doi:<a href="https://doi.org/10.18637/jss.v059.i10" role="doc-biblioref">10.18637/jss.v059.i10</a></a>.<a href="introduction.html#fnref5" class="footnote-back">↩︎</a></p></li>
 <li id="fn6"><p><a href="#ref-wickham2017" role="doc-biblioref">Wickham and Grolemund, <em>R for Data Science</em>, 12.2</a>.<a href="introduction.html#fnref6" class="footnote-back">↩︎</a></p></li>
+<li id="fn7"><p><a href="#ref-walker2021" role="doc-biblioref">Walker, <em>Analyzing US Census Data</em>, 2</a>.<a href="introduction.html#fnref7" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
@@ -231,7 +251,7 @@ Wickham, Hadley, and Garrett Grolemund. <em>R for Data Science</em>. O’Reilly,
         </div>
       </div>
 <a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="getting-census-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

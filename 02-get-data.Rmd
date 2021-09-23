@@ -1,0 +1,3 @@
+# Getting Census Data
+
+This section will cover how to collect various types of Census data using **tidycensus**.
