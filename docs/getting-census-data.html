@@ -24,7 +24,7 @@
 <meta name="author" content="Sarah Johnson" />
 
 
-<meta name="date" content="2021-09-22" />
+<meta name="date" content="2021-09-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -55,6 +55,70 @@
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 
 
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
@@ -109,7 +173,14 @@ div.csl-indent {
 <li class="chapter" data-level="1.2.2" data-path="introduction.html"><a href="introduction.html#tidycensus"><i class="fa fa-check"></i><b>1.2.2</b> tidycensus</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="getting-census-data.html"><a href="getting-census-data.html"><i class="fa fa-check"></i><b>2</b> Getting Census Data</a></li>
+<li class="chapter" data-level="2" data-path="getting-census-data.html"><a href="getting-census-data.html"><i class="fa fa-check"></i><b>2</b> Getting Census Data</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="getting-census-data.html"><a href="getting-census-data.html#getting-data"><i class="fa fa-check"></i><b>2.1</b> Getting Data</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="getting-census-data.html"><a href="getting-census-data.html#decennial-census"><i class="fa fa-check"></i><b>2.1.1</b> Decennial Census</a></li>
+<li class="chapter" data-level="2.1.2" data-path="getting-census-data.html"><a href="getting-census-data.html#american-community-survey"><i class="fa fa-check"></i><b>2.1.2</b> American Community Survey</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -133,8 +204,103 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="getting-census-data" class="section level1" number="2">
 <h1><span class="header-section-number">Chapter 2</span> Getting Census Data</h1>
-<p>This section will cover how to collect various types of Census data using tidycensus.</p>
+<div id="getting-data" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> Getting Data</h2>
+<p>This section will cover how to collect various types of Census data using <strong>tidycensus</strong>. If this is your first time using tidycensus, run <code>install.packages("tidycensus")</code>.</p>
+<p>You will also need a Census API key, available at <a href="https://api.census.gov/data/key_signup.html" class="uri">https://api.census.gov/data/key_signup.html</a>. The key is required every time you call data; run <code>census_api_key()</code> with <code>install = TRUE</code> to automatically include the key in calls.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="getting-census-data.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="getting-census-data.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidycensus)</span>
+<span id="cb1-3"><a href="getting-census-data.html#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># census_api_key(&quot;YOUR KEY GOES HERE&quot;, install = TRUE)</span></span></code></pre></div>
+<div id="decennial-census" class="section level3" number="2.1.1">
+<h3><span class="header-section-number">2.1.1</span> Decennial Census</h3>
+<p>To get data from the decennial Census, users must specify a <code>geography</code> and one or more <code>variables</code>, such as population. A <code>year</code> is optional; if omitted, it will default to the most recently available dataset. The following code gets the total population from all states, plus D.C. and Puerto Rico, from the 2010 decennial Census.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="getting-census-data.html#cb2-1" aria-hidden="true" tabindex="-1"></a>totPop10 <span class="ot">&lt;-</span> <span class="fu">get_decennial</span>(</span>
+<span id="cb2-2"><a href="getting-census-data.html#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">geography =</span> <span class="st">&quot;state&quot;</span>,</span>
+<span id="cb2-3"><a href="getting-census-data.html#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">variables =</span> <span class="st">&quot;P001001&quot;</span>,</span>
+<span id="cb2-4"><a href="getting-census-data.html#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">year =</span> <span class="dv">2010</span>,</span>
+<span id="cb2-5"><a href="getting-census-data.html#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">cache_table =</span> <span class="cn">TRUE</span></span>
+<span id="cb2-6"><a href="getting-census-data.html#cb2-6" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<p>In RStudio, the table <code>totPop10</code> appears under the <em>Environment</em> tab. Users can click on the table to open it and see the full list of states. Clicking on the <code>value</code> column name sorts state population by ascending or descending order.</p>
+<div class="figure">
+<img src="_img/rstudio-tbl.png" alt="" />
+<p class="caption">Total population of all states according to the 2010 decennial Census, sorted by descending order in RStudio.</p>
+</div>
+<p>According to the 2010 decennial Census, there were 6,346,105 people living in Tennessee, making it the 17th most populous state.</p>
+<p>Slightly changing the code allows us to find the 2000 population.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="getting-census-data.html#cb3-1" aria-hidden="true" tabindex="-1"></a>totPop00 <span class="ot">&lt;-</span> <span class="fu">get_decennial</span>(</span>
+<span id="cb3-2"><a href="getting-census-data.html#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">geography =</span> <span class="st">&quot;state&quot;</span>,</span>
+<span id="cb3-3"><a href="getting-census-data.html#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">variables =</span> <span class="st">&quot;P001001&quot;</span>,</span>
+<span id="cb3-4"><a href="getting-census-data.html#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">year =</span> <span class="dv">2000</span>,</span>
+<span id="cb3-5"><a href="getting-census-data.html#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">cache_table =</span> <span class="cn">TRUE</span></span>
+<span id="cb3-6"><a href="getting-census-data.html#cb3-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-7"><a href="getting-census-data.html#cb3-7" aria-hidden="true" tabindex="-1"></a>totPop00 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(NAME <span class="sc">==</span> <span class="st">&quot;Tennessee&quot;</span>)</span></code></pre></div>
+<pre><code>## # A tibble: 1 × 4
+##   GEOID NAME      variable   value
+##   &lt;chr&gt; &lt;chr&gt;     &lt;chr&gt;      &lt;dbl&gt;
+## 1 47    Tennessee P001001  5689283</code></pre>
+<p>There were 5,689,283 people in Tennessee in 2000.</p>
+<p>We can then join the tables and find the population change of all states over the decade. The below function:</p>
+<ol style="list-style-type: decimal">
+<li>First, joins the tables by the <code>NAME</code> variable (you could also use <code>GEOID</code>).</li>
+<li>When the tables are joined, matching column names are automatically relabeled (such as <code>value.x</code> and <code>value.y</code>). To avoid confusion, I used <code>rename()</code> to change the column names.</li>
+<li>The <code>mutate()</code> function was used to create a new column called <code>popChg</code>. The values of the new column were found by subtracting <code>pop10</code> and <code>pop00</code>.</li>
+<li><code>select()</code> is used to narrow the table to only show relevant columns (excluding <code>GEOID</code> and <code>variable</code> columns).</li>
+<li>I used <code>arrange()</code> to sort the table by descending <code>popChg</code>. This means states with the largest change in population appear at the top.</li>
+<li>Finally, <code>head()</code> previews the table and allows us to select how many rows to view.</li>
+</ol>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="getting-census-data.html#cb5-1" aria-hidden="true" tabindex="-1"></a>totPop <span class="ot">&lt;-</span> totPop00 <span class="sc">%&gt;%</span> </span>
+<span id="cb5-2"><a href="getting-census-data.html#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(totPop10, <span class="at">by =</span> <span class="st">&quot;NAME&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-3"><a href="getting-census-data.html#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">pop00 =</span> value.x,</span>
+<span id="cb5-4"><a href="getting-census-data.html#cb5-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">pop10 =</span> value.y) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-5"><a href="getting-census-data.html#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">popChg =</span> pop10 <span class="sc">-</span> pop00) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-6"><a href="getting-census-data.html#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(NAME, pop00, pop10, popChg) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-7"><a href="getting-census-data.html#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(popChg))</span>
+<span id="cb5-8"><a href="getting-census-data.html#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(totPop, <span class="dv">15</span>)</span></code></pre></div>
+<pre><code>## # A tibble: 15 × 4
+##    NAME              pop00    pop10  popChg
+##    &lt;chr&gt;             &lt;dbl&gt;    &lt;dbl&gt;   &lt;dbl&gt;
+##  1 Texas          20851820 25145561 4293741
+##  2 California     33871648 37253956 3382308
+##  3 Florida        15982378 18801310 2818932
+##  4 Georgia         8186453  9687653 1501200
+##  5 North Carolina  8049313  9535483 1486170
+##  6 Arizona         5130632  6392017 1261385
+##  7 Virginia        7078515  8001024  922509
+##  8 Washington      5894121  6724540  830419
+##  9 Colorado        4301261  5029196  727935
+## 10 Nevada          1998257  2700551  702294
+## 11 Tennessee       5689283  6346105  656822
+## 12 South Carolina  4012012  4625364  613352
+## 13 Utah            2233169  2763885  530716
+## 14 Maryland        5296486  5773552  477066
+## 15 Pennsylvania   12281054 12702379  421325</code></pre>
+<p>From 2000 to 2010, Tennessee’s total population rose by 656,822 people. This was the 11th highest gain in total population of all states (plus D.C. and Puerto Rico). Before moving on, let’s also calculate the percent change in population to see which states grew the fastest.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="getting-census-data.html#cb7-1" aria-hidden="true" tabindex="-1"></a>totPop <span class="ot">&lt;-</span> totPop <span class="sc">%&gt;%</span> </span>
+<span id="cb7-2"><a href="getting-census-data.html#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">pctChg =</span> (pop10<span class="sc">-</span>pop00)<span class="sc">/</span>pop00) <span class="sc">%&gt;%</span> </span>
+<span id="cb7-3"><a href="getting-census-data.html#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(pctChg))</span>
+<span id="cb7-4"><a href="getting-census-data.html#cb7-4" aria-hidden="true" tabindex="-1"></a>totPop</span></code></pre></div>
+<pre><code>## # A tibble: 52 × 5
+##    NAME              pop00    pop10  popChg pctChg
+##    &lt;chr&gt;             &lt;dbl&gt;    &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;
+##  1 Nevada          1998257  2700551  702294  0.351
+##  2 Arizona         5130632  6392017 1261385  0.246
+##  3 Utah            2233169  2763885  530716  0.238
+##  4 Idaho           1293953  1567582  273629  0.211
+##  5 Texas          20851820 25145561 4293741  0.206
+##  6 North Carolina  8049313  9535483 1486170  0.185
+##  7 Georgia         8186453  9687653 1501200  0.183
+##  8 Florida        15982378 18801310 2818932  0.176
+##  9 Colorado        4301261  5029196  727935  0.169
+## 10 South Carolina  4012012  4625364  613352  0.153
+## # … with 42 more rows</code></pre>
+<p>The fastest growing states during the 2000s were in the southwest: Nevada, Arizona, and Utah. Meanwhile, Tennessee’s population increased by 11.54% from 2000 to 2010, making it the 19th fastest growing state.</p>
+</div>
+<div id="american-community-survey" class="section level3" number="2.1.2">
+<h3><span class="header-section-number">2.1.2</span> American Community Survey</h3>
+<p>The American Community Survey is accessed through the <code>get_acs()</code> function. The</p>
 
+</div>
+</div>
 </div>
             </section>
 

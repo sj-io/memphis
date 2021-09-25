@@ -6,3 +6,6 @@ r
 tidyverse
 tidycensus
 getting-census-data
+getting-data
+decennial-census
+american-community-survey
